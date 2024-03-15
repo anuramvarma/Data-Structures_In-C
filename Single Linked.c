@@ -1,5 +1,3 @@
-
-
 #include<stdio.h>
 #include<stdlib.h>
 struct node{
@@ -19,8 +17,8 @@ void display(struct node*head)
 	struct node*ptr=head;
 	while(ptr!=NULL)
 	{
-		printf("%d ",ptr->data);
-		ptr=ptr->next;
+	printf("%d ",ptr->data);
+	ptr=ptr->next;
 	}
 }
 int count_of_nodes(struct node*head);
@@ -55,11 +53,11 @@ struct node*temp=malloc(sizeof(struct node*));
 	{
 		ptr=ptr->next;
 	}
-	ptr->next=temp;
+	        ptr->next=temp;
 		
 }
-void insert_at_position(struct node*head,int d,int pos);
-void insert_at_position(struct node*head,int d,int pos)
+  void insert_at_position(struct node*head,int d,int pos);
+  void insert_at_position(struct node*head,int d,int pos)
 {
 	struct node*temp=malloc(sizeof(struct node*));
 	temp->data=d;
@@ -71,8 +69,8 @@ void insert_at_position(struct node*head,int d,int pos)
 		ptr=ptr->next;
 		pos--;
 	}
-	temp->next=ptr->next;
-	ptr->next=temp;
+	     temp->next=ptr->next;
+	     ptr->next=temp;
 }
 void delete_at_beginning(struct node**head);
 void delete_at_beginning(struct node**head)
@@ -82,39 +80,39 @@ struct node *ptr=*head;
 free(ptr);
 
 }
-void delete_at_end(struct node*head);
-void delete_at_end(struct node*head){
-struct node*current =malloc(sizeof(struct node *));
-struct node*ptr=head;
-while(ptr->next!=NULL)
-	{
-    current=ptr;
-		ptr=ptr->next;
-	}
+  void delete_at_end(struct node*head);
+  void delete_at_end(struct node*head){
+   struct node*current =malloc(sizeof(struct node *));
+    struct node*ptr=head;
+   while(ptr->next!=NULL)
+   {
+           current=ptr;
+           ptr=ptr->next;
+   }
     current->next=NULL;
     free(ptr);
     
-
 }
-void delete_at_position(struct node*head,int pos);
-void delete_at_position(struct node*head,int pos)
+   void delete_at_position(struct node*head,int pos);
+   void delete_at_position(struct node*head,int pos)
 {
 struct node*ptr=head;
 struct node*ptr1;
 pos--;
-while(pos!=1)
+   while(pos!=1)
 {
-ptr=ptr->next;
-pos--;
+  ptr=ptr->next;
+  pos--;
 }
-ptr1->next=ptr->next;
-free(ptr);
+  ptr1->next=ptr->next;
+    free(ptr);
 }
+
 int main()
 {
 	struct node*head=NULL;
 	head=(struct node*)malloc(sizeof(struct node*));
-	create_node(&head,10);
+    create_node(&head,10);
 	display(head);
 	count_of_nodes(head);
     printf("\n");
@@ -130,11 +128,11 @@ int main()
 	delete_at_beginning(&head);
 	display(head);
     printf("\n");
-    delete_at_end(head);
-    display(head);
+        delete_at_end(head);
+        display(head);
     printf("\n");
-    delete_at_position(head,2);
-    display(head);
+        delete_at_position(head,2);
+        display(head);
     
 	
 }
