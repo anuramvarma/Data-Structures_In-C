@@ -19,13 +19,13 @@ int main()
  printarray(a,n); 
  return 0;
 }
-void readarray(int a[],int n)
+  void readarray(int a[],int n)
 {
  for(int i=0;i<n;i++)
- {
+  {
   printf("Enter a[%d]:",i);
   scanf("%d",&a[i]);
- }
+  }
 }
 void printarray(int a[],int n)
 {
@@ -42,20 +42,19 @@ void swap(int *x,int *y)
  *x=*y;
  *y=temp;
 }
-void sort(int a[],int n)
+   void sort(int a[],int n)
 {
  for(int i=0;i<n-1;i++)
  {
   int min_idx=i;
-  for(int j=i+1;j<n;j++)
+   for(int j=i+1;j<n;j++)
   {
    if(a[j]<a[min_idx])
-   {
-    min_idx=j;
-   }
+    {
+        min_idx=j;
+    }
   }
   if(min_idx!=i)
    swap(&a[i],&a[min_idx]);
  }
 }
-
