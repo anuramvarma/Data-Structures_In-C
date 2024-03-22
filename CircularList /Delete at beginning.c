@@ -25,7 +25,7 @@ temp->next=temp;
     while(ptr!=tail->next);
 }
 
-//This function is need to be in code for output of delete operation,because of insufficient Nodes//
+//This insertion function is to be there in Code//
    void insert_at_position(struct node*tail,int pos,int d)
 {
     struct node*temp=malloc(sizeof(struct node*));
@@ -53,6 +53,7 @@ temp->next=temp;
         (*tail)=NULL;
       }
 }
+
 
 int main()
 {
