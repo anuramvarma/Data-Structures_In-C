@@ -26,14 +26,12 @@ void swap(int *,int*);
          {
             key=a[i];
             j=i-1;
-            
             while(j>=0&&a[j]>key)
             {
                  a[j+1]=a[j];
                  j--;
              }
-               a[j+1]=key;
-                
+               a[j+1]=key;     
          }
 }
   void swap(int *x,int *y)
@@ -45,10 +43,9 @@ void swap(int *,int*);
       int main()
       {
        int n,i;
-      
       printf("enter the size of an array");
       scanf("%d",&n);
-      int a[n];
+       int a[n];
       printf("enter the %d elements",n);
       Read(a,n);
        /*for(i=0;i<n;i++)
