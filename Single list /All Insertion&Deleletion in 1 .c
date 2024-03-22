@@ -74,23 +74,23 @@ struct node*temp=malloc(sizeof(struct node*));
 	     temp->next=ptr->next;
 	     ptr->next=temp;
 }
-void delete_at_beginning(struct node**head);
-void delete_at_beginning(struct node**head)
+  void delete_at_beginning(struct node**head);
+  void delete_at_beginning(struct node**head)
 {
 struct node *ptr=*head;
 (*head)=(*head)->next;
 free(ptr);
 
 }
-  void delete_at_end(struct node*head);
-  void delete_at_end(struct node*head){
+ void delete_at_end(struct node*head);
+ void delete_at_end(struct node*head){
    struct node*current =malloc(sizeof(struct node *));
     struct node*ptr=head;
    while(ptr->next!=NULL)
-   {
-           current=ptr;
-           ptr=ptr->next;
-   }
+       {
+            current=ptr;
+            ptr=ptr->next;
+       }
     current->next=NULL;
     free(ptr);
     
@@ -98,18 +98,18 @@ free(ptr);
    void delete_at_position(struct node*head,int pos);
    void delete_at_position(struct node*head,int pos)
 {
-struct node*ptr=head;
-struct node*ptr1;
-pos--;
+    struct node*ptr=head;
+    struct node*ptr1;
+      pos--;
    while(pos!=1)
-{
-  ptr=ptr->next;
-  pos--;
-}
+     {
+       ptr=ptr->next;
+       pos--;
+     }
   ptr1->next=ptr->next;
     free(ptr);
 }
-int main()
+  int main()
 {
 	struct node*head=NULL;
 	head=(struct node*)malloc(sizeof(struct node*));
@@ -135,12 +135,3 @@ int main()
         delete_at_position(head,2);
         display(head);   	
 }
-
-
-
-
-
-
-
-
-
