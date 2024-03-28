@@ -19,41 +19,42 @@ int main()
 {
 	int mid,end,start=0,i,n,a[50],key;
 	printf("enter a size of the array");
-	scanf("%d",&n);
+	  scanf("%d",&n);
 	printf("enter a key");
-	scanf("%d",&key);
+	  scanf("%d",&key);
 	printf("enter a elements");
 	for(i=0;i<n;++i)
 	{	
-		scanf("%d",&a[i]);
+	  scanf("%d",&a[i]);
 	}
 	sort(a,n);
 	printf("storted array=");
 	for(i=0;i<n;++i)
-	{
-		printf("%d ",a[i]);
-	}
+	  {
+	    printf("%d ",a[i]);
+	  }
 	end=n-1;
 	while(start<=end)
 	{
 		mid=(start+end)/2;
-		if(key==a[mid]){
-			printf("\nkey found at %d",mid+1);
-			break;
-	}
+		if(key==a[mid])
+		{
+		  printf("\nkey found at %d",mid+1);
+		  break;
+	        }
 else if(key<a[mid])
-{
-end=mid-1;
-}
+ {
+  end=mid-1;
+ }
 else if(key>a[mid])
-{
-start=mid;
-}
+  {
+    start=mid;
+  }
 else
-{
-printf("element not found");
-return 0;
-}
-}
+  {
+   printf("element not found");
+   return 0;
+  }
+	}
 return 0;
 }
