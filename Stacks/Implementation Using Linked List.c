@@ -12,8 +12,7 @@ struct node *head;
 void main ()  
 {  
     int choice=0;     
-    printf("\n**Stack Operations using Linked list**\n");  
-    printf("\n----------------------------------------------\n");  
+    printf("\n**Stack Operations using Linked list**\n");    
     while(choice != 4)  
     {  
         printf("\n\nChoose one from the below options...\n");  
