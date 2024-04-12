@@ -13,11 +13,11 @@ int main()
     printf("\n\t 1.PUSH\n\t 2.POP\n\t 3.DISPLAY\n\t 4.EXIT");
     do
     {
-        printf("\n Enter the Choice:");
-        scanf("%d",&choice);
-        switch(choice)
-        {
-            case 1:
+      printf("\n Enter the Choice:");
+      scanf("%d",&choice);
+          switch(choice)
+       {
+          case 1:
               {
                 push();
                 break;
