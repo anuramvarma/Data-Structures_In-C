@@ -6,14 +6,15 @@ char stack[max];
 int top = -1;
 
 void push(char element)     
-{
+  {
 	top++;
 	stack[top]=element;
-}
+  }
 char pop(){
-	if(top==-1) {
-	printf("Stack underflow");
-	exit(1);
+	if(top==-1) 
+	{
+	  printf("Stack underflow");
+	  exit(1);
 	}
 	return(stack[top--]);
 }
@@ -23,14 +24,14 @@ char pop(){
     return (ch>='0' && ch<='9');   
 }   
 
-int main(void) {
+int main(void) 
+{
 	char ch,element,s;
 	int i=0,k=0,num1,num2,ans;
 	printf("READ THE postfix\n\n");
 	scanf("%s",postfix);
-	                                 
-    
-	while((postfix[i])!='\0'){
+	while((postfix[i])!='\0')
+	{
 		ch=postfix[i];
 		if(check(ch))
 		   push(ch);
@@ -38,8 +39,8 @@ int main(void) {
 			num1=pop()-'0';
 			num2=pop()-'0';
 			printf("%d %d ",num1,num2);
-
-			switch(ch) {
+			switch(ch) 
+	{
             case '+' :
                 ans=num2+num1;
                 break;
@@ -52,11 +53,11 @@ int main(void) {
             case '/':
                 ans=num2/num1;
                 break;
-            }
-  			ans=ans+'0';
-            push(ans) ;
         }
-      i++;
+  			ans=ans+'0';
+                push(ans) ;
+        }
+             i++;
 }
 	printf("\nGiven postfix Expn: %s", postfix );
 	printf("\nAnswer=%d",pop()-'0');
