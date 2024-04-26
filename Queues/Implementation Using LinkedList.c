@@ -41,14 +41,13 @@ void main()
 void insert()  
 {  
     struct node *ptr;  
-    int item;   
-      
+    int item;          
     ptr = (struct node *) malloc (sizeof(struct node));  
     if(ptr == NULL)  
-    {  
-        printf("\nQueue is OVERFLOW\n");  
-        return;  
-    }  
+      {  
+         printf("\nQueue is OVERFLOW\n");  
+         return;  
+      }  
     else  
     {   
         printf("\nEnter value to insert :\n");  
